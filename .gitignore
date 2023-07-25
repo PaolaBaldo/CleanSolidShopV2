@@ -26,3 +26,11 @@ yarn-error.log*
 frontend/build
 uploads/*png
 uploads/*jpg
+/.idea/.gitignore
+/.idea/sonarlint/issuestore/index.pb
+/.idea/misc.xml
+/.idea/modules.xml
+/proshop-v2.iml
+/.idea/vcs.xml
+/cleansolid-shop.iml
+/.idea/workspace.xml
