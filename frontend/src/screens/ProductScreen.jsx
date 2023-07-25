@@ -21,6 +21,10 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Meta from '../components/Meta';
 import { addToCart } from '../slices/cartSlice';
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-K6EQWD1G62"; // OUR_TRACKING_ID
+
+ReactGA.initialize(TRACKING_ID);
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
