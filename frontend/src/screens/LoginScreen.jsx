@@ -8,6 +8,10 @@ import FormContainer from '../components/FormContainer';
 import { useLoginMutation } from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
 import { toast } from 'react-toastify';
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-F3PQBC1Z7F"; // OUR_TRACKING_ID
+
+ReactGA.initialize(TRACKING_ID);
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');

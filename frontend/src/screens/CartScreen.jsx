@@ -12,6 +12,10 @@ import {
 import { FaTrash } from 'react-icons/fa';
 import Message from '../components/Message';
 import { addToCart, removeFromCart } from '../slices/cartSlice';
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-F3PQBC1Z7F"; // OUR_TRACKING_ID
+
+ReactGA.initialize(TRACKING_ID);
 
 const CartScreen = () => {
   const navigate = useNavigate();

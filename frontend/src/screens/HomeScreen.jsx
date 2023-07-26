@@ -8,6 +8,10 @@ import Message from '../components/Message';
 import Paginate from '../components/Paginate';
 import ProductCarousel from '../components/ProductCarousel';
 import Meta from '../components/Meta';
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-F3PQBC1Z7F"; // OUR_TRACKING_ID
+
+ReactGA.initialize(TRACKING_ID);
 
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
