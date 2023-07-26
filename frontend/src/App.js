@@ -9,7 +9,7 @@ import { logout } from './slices/authSlice';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ReactGA from 'react-ga';
-  const TRACKING_ID = "G-K6EQWD1G62"; // OUR_TRACKING_ID
+  const TRACKING_ID = "G-F3PQBC1Z7F"; // OUR_TRACKING_ID
   ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
