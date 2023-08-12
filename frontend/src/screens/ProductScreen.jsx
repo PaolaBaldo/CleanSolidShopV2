@@ -98,9 +98,9 @@ const ProductScreen = () => {
                     text={`${product.numReviews} reviews`}
                   />
                 </ListGroup.Item>
-                <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+                <ListGroup.Item>Preço: ${product.price}</ListGroup.Item>
                 <ListGroup.Item>
-                  Description: {product.description}
+                  Descrição: {product.description}
                 </ListGroup.Item>
               </ListGroup>
             </Col>
@@ -109,44 +109,15 @@ const ProductScreen = () => {
                 <ListGroup variant='flush'>
                   <ListGroup.Item>
                     <Row>
-                      <Col>Price:</Col>
+                      <Col>Preço:</Col>
                       <Col>
                         <strong>${product.price}</strong>
                       </Col>
                     </Row>
                   </ListGroup.Item>
-                  <ListGroup.Item>
-                    <Row>
-                      <Col>Status:</Col>
-                      <Col>
-                        {product.countInStock > 0 ? 'In Stock' : 'Out Of Stock'}
-                      </Col>
-                    </Row>
-                  </ListGroup.Item>
+
 
                   {/* Qty Select */}
-                  {product.countInStock > 0 && (
-                    <ListGroup.Item>
-                      <Row>
-                        <Col>Qty</Col>
-                        <Col>
-                          <Form.Control
-                            as='select'
-                            value={qty}
-                            onChange={(e) => setQty(Number(e.target.value))}
-                          >
-                            {[...Array(product.countInStock).keys()].map(
-                              (x) => (
-                                <option key={x + 1} value={x + 1}>
-                                  {x + 1}
-                                </option>
-                              )
-                            )}
-                          </Form.Control>
-                        </Col>
-                      </Row>
-                    </ListGroup.Item>
-                  )}
 
                   <ListGroup.Item>
                     <Button
@@ -155,7 +126,7 @@ const ProductScreen = () => {
                       disabled={product.countInStock === 0}
                       onClick={addToCartHandler}
                     >
-                      Add To Cart
+                      Criar loja virtual grátis
                     </Button>
                   </ListGroup.Item>
                 </ListGroup>
@@ -164,7 +135,7 @@ const ProductScreen = () => {
           </Row>
           <Row className='review'>
             <Col md={6}>
-              <h2>Reviews</h2>
+              <h2>Avaliações</h2>
               {product.reviews.length === 0 && <Message>No Reviews</Message>}
               <ListGroup variant='flush'>
                 {product.reviews.map((review) => (
@@ -176,7 +147,7 @@ const ProductScreen = () => {
                   </ListGroup.Item>
                 ))}
                 <ListGroup.Item>
-                  <h2>Write a Customer Review</h2>
+                  <h2>Escreva uma avaliação</h2>
 
                   {loadingProductReview && <Loader />}
 
